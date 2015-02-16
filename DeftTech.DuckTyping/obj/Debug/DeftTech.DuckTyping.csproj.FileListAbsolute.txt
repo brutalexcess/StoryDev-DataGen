@@ -1,0 +1,5 @@
+C:\Business\Software\Ancient Domain Plugin\DeftTech.DuckTyping\bin\Debug\DeftTech.DuckTyping.dll
+C:\Business\Software\Ancient Domain Plugin\DeftTech.DuckTyping\bin\Debug\DeftTech.DuckTyping.pdb
+C:\Business\Software\Ancient Domain Plugin\DeftTech.DuckTyping\obj\Debug\DeftTech.DuckTyping.csprojResolveAssemblyReference.cache
+C:\Business\Software\Ancient Domain Plugin\DeftTech.DuckTyping\obj\Debug\DeftTech.DuckTyping.dll
+C:\Business\Software\Ancient Domain Plugin\DeftTech.DuckTyping\obj\Debug\DeftTech.DuckTyping.pdb

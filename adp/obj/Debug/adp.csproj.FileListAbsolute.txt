@@ -1,0 +1,17 @@
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\adp.exe
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\adp.pdb
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\RandomNameGeneratorLibrary.dll
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\StoryDev.API.dll
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\StoryDev.API.pdb
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.MainForm.resources
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.csproj.GenerateResource.Cache
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.exe
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.pdb
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.CodeEditor.resources
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\FastColoredTextBox.dll
+C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\FastColoredTextBox.xml
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.csprojResolveAssemblyReference.cache
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.LoadForm.resources
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.CtlString.resources
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.CtlLString.resources
+C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\adp.CtlCode.resources
