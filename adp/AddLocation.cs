@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace sddg
 {
@@ -30,7 +31,9 @@ namespace sddg
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var obj = Activator.CreateInstance(typeof(DataList<>).MakeGenericType(type), txtLocation.Text);
-            dataList.Add(obj);
+            Type t = dataList.GetType();
+            t.GetMethod("Add").Invoke(dataList, new object[] {obj});
+
             Close();
         }
 

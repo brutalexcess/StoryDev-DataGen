@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNewRecord = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbFile = new System.Windows.Forms.ComboBox();
             this.btnDataStructure = new System.Windows.Forms.Button();
             this.cmbStructure = new System.Windows.Forms.ComboBox();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.lbResults = new System.Windows.Forms.ListBox();
+            this.btnUpdateRecord = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnUpdateRecord);
+            this.panel1.Controls.Add(this.btnNewRecord);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbFile);
@@ -53,6 +56,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 73);
             this.panel1.TabIndex = 5;
+            // 
+            // btnNewRecord
+            // 
+            this.btnNewRecord.Enabled = false;
+            this.btnNewRecord.Location = new System.Drawing.Point(556, 12);
+            this.btnNewRecord.Name = "btnNewRecord";
+            this.btnNewRecord.Size = new System.Drawing.Size(104, 23);
+            this.btnNewRecord.TabIndex = 10;
+            this.btnNewRecord.Text = "New Record";
+            this.btnNewRecord.UseVisualStyleBackColor = true;
+            this.btnNewRecord.Click += new System.EventHandler(this.btnNewRecord_Click);
             // 
             // txtSearch
             // 
@@ -103,21 +117,32 @@
             // pnlContent
             // 
             this.pnlContent.AutoScroll = true;
-            this.pnlContent.Controls.Add(this.dgvResults);
+            this.pnlContent.Controls.Add(this.lbResults);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 73);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(672, 288);
             this.pnlContent.TabIndex = 6;
             // 
-            // dgvResults
+            // lbResults
             // 
-            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvResults.Location = new System.Drawing.Point(0, 0);
-            this.dgvResults.Name = "dgvResults";
-            this.dgvResults.Size = new System.Drawing.Size(672, 288);
-            this.dgvResults.TabIndex = 0;
+            this.lbResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbResults.FormattingEnabled = true;
+            this.lbResults.Location = new System.Drawing.Point(0, 0);
+            this.lbResults.Name = "lbResults";
+            this.lbResults.Size = new System.Drawing.Size(672, 288);
+            this.lbResults.TabIndex = 0;
+            // 
+            // btnUpdateRecord
+            // 
+            this.btnUpdateRecord.Enabled = false;
+            this.btnUpdateRecord.Location = new System.Drawing.Point(556, 39);
+            this.btnUpdateRecord.Name = "btnUpdateRecord";
+            this.btnUpdateRecord.Size = new System.Drawing.Size(104, 23);
+            this.btnUpdateRecord.TabIndex = 11;
+            this.btnUpdateRecord.Text = "Update Record";
+            this.btnUpdateRecord.UseVisualStyleBackColor = true;
+            this.btnUpdateRecord.Click += new System.EventHandler(this.btnUpdateRecord_Click);
             // 
             // SearchForm
             // 
@@ -138,7 +163,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlContent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,6 +176,8 @@
         private System.Windows.Forms.Button btnDataStructure;
         private System.Windows.Forms.ComboBox cmbStructure;
         private System.Windows.Forms.Panel pnlContent;
-        private System.Windows.Forms.DataGridView dgvResults;
+        private System.Windows.Forms.Button btnNewRecord;
+        private System.Windows.Forms.ListBox lbResults;
+        private System.Windows.Forms.Button btnUpdateRecord;
     }
 }

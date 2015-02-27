@@ -24,6 +24,7 @@ namespace sddg
         public string FieldValue
         {
             get { return txtValue.Text; }
+            set { txtValue.Text = value; }
         }
 
         public CtlString(string fieldName)

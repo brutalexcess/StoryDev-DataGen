@@ -13,11 +13,15 @@ namespace sddg
 {
     public partial class SearchForm : Form
     {
+        private string previousFile;
+
         public SearchForm()
         {
             InitializeComponent();
 
             PopulateStructureList();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -69,10 +73,26 @@ namespace sddg
                     }
                 }
             }
+            else
+                btnNewRecord.Enabled = false;
         }
 
         private void cmbFile_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (previousFile != "<Add Location...>" || previousFile != "")
+            {
+                foreach (StructureType st in Structure.Structures)
+                {
+                    if (st.ClassName == (string)cmbStructure.SelectedItem)
+                    {
+                        var obj = st.ClassDataList[Structure.Structures.IndexOf(st)];
+                        Type dataList = obj.GetType();
+                        dataList.GetMethod("Save").Invoke(dataList, new object[] {});
+                    }
+                }
+            }
+            previousFile = (string)cmbFile.SelectedItem;
+
             if ((string)cmbFile.SelectedItem == "<Add Location...>")
             {
                 var addLocation = new AddLocation();
@@ -87,7 +107,13 @@ namespace sddg
                         break;
                     }
                 }
-                
+                btnNewRecord.Enabled = false;
+            }
+            else
+            {
+
+
+                btnNewRecord.Enabled = true;
             }
         }
 
@@ -98,6 +124,35 @@ namespace sddg
                 if (st.ClassName == (string)cmbStructure.SelectedItem)
                 {
                     PopulateFileList(st.ClassDataList);
+                }
+            }
+        }
+
+        private void btnNewRecord_Click(object sender, EventArgs e)
+        {
+            foreach (StructureType st in Structure.Structures)
+            {
+                if (st.ClassName == (string)cmbStructure.SelectedItem)
+                {
+                    Type t = st.ClassDataList[Structure.Structures.IndexOf(st)].GetType();
+                    var obj = t.GetProperty("Data").GetValue(st.ClassDataList[Structure.Structures.IndexOf(st)]);
+                    new LoadForm(st.ClassType, obj).ShowDialog();
+                    return;
+                }
+            }
+        }
+
+        private void btnUpdateRecord_Click(object sender, EventArgs e)
+        {
+            foreach (StructureType st in Structure.Structures)
+            {
+                if (st.ClassName == (string)cmbStructure.SelectedItem)
+                {
+                    JsonControlType identifier;
+                    Type dataListType = st.ClassDataList[Structure.Structures.IndexOf(st)].GetType();
+                    var obj = dataListType.GetProperty("Data").GetValue(st.ClassDataList[Structure.Structures.IndexOf(st)]);
+                    
+                    
                 }
             }
         }

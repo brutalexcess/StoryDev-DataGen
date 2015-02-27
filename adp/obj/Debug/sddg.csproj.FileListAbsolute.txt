@@ -17,7 +17,4 @@ C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\sddg.MainForm.resources
 C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\sddg.SearchForm.resources
 C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\sddg.CodeEditor.resources
 C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\sddg.DataStructure.resources
-C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\CSScriptLibrary.dll
-C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\Mono.CSharp.dll
-C:\Business\Software\Ancient Domain Plugin\adp\bin\Debug\CSScriptLibrary.xml
 C:\Business\Software\Ancient Domain Plugin\adp\obj\Debug\sddg.AddLocation.resources

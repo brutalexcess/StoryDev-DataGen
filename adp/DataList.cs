@@ -38,5 +38,10 @@ namespace sddg
             Data = Json.Decode<List<T>>(File.ReadAllText(Location));
         }
 
+        public void Unload()
+        {
+            Data = null;
+        }
+
     }
 }

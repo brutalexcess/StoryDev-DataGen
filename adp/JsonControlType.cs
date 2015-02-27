@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 namespace sddg
 {
     [System.AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
-    public class ControlType : Attribute
+    public class JsonControlType : Attribute
     {
         public string controlType;
         public bool Identifier;
+        public string FieldTitle;
 
-        public ControlType(string type, bool identifier = false)
+        public JsonControlType(string type, string fieldTitle = "",  bool identifier = false)
         {
             controlType = type;
             Identifier = identifier;
+            FieldTitle = fieldTitle;
         }
 
     }

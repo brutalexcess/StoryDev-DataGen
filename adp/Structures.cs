@@ -34,33 +34,35 @@ namespace sddg
 
         public static void Save()
         {
-            using (FileStream fs = new FileStream("structures.cnf", FileMode.Create))
+            var stj = new List<StructureTypeJson>();
+            foreach (StructureType item in Structures)
             {
-                using (BinaryWriter bw = new BinaryWriter(fs))
+                var obj = new StructureTypeJson();
+                obj.ClassCode = item.ClassCode;
+                foreach (dynamic listItem in item.ClassDataList)
                 {
-                    bw.Write(Structures.Count);
-                    foreach (StructureType st in Structures)
-                    {
-                        bw.Write(st.ClassCode);
-                    }
+                    obj.Location.Add(listItem.Location);
                 }
+                stj.Add(obj);
             }
+            File.WriteAllText("structures.json", Json.Encode(stj));
         }
 
         public static void Load()
         {
-            if (File.Exists("structures.cnf"))
+            if (!File.Exists("structures.json")) return;
+            var stj = new List<StructureTypeJson>();
+            stj = Json.Decode<List<StructureTypeJson>>(File.ReadAllText("structures.json"));
+
+            foreach (var item in stj)
             {
-                using (FileStream fs = new FileStream("structures.cnf", FileMode.Open))
+                Add(item.ClassCode);
+                foreach (string location in item.Location)
                 {
-                    using (BinaryReader br = new BinaryReader(fs))
-                    {
-                        var count = br.ReadInt32();
-                        for (var i = 0; i < count; i++)
-                        {
-                            Add(br.ReadString());
-                        }
-                    }
+                    var structureListItem = Structures[stj.IndexOf(item)];
+                    var obj = Activator.CreateInstance(typeof(DataList<>).MakeGenericType(structureListItem.ClassType), location);
+                    Type t = structureListItem.ClassDataList.GetType();
+                    t.GetMethod("Add").Invoke(structureListItem.ClassDataList, new object[] { obj });
                 }
             }
         }
@@ -118,4 +120,9 @@ namespace sddg
         public Type ListType;
     }
 
+    public struct StructureTypeJson
+    {
+        public string ClassCode;
+        public List<string> Location;
+    }
 }

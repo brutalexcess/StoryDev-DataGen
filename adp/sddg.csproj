@@ -55,14 +55,8 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSScriptLibrary">
-      <HintPath>..\packages\CS-Script.3.9.2.0\lib\net45\CSScriptLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="FastColoredTextBox">
       <HintPath>..\..\..\..\Users\Brutal\Downloads\FastColoredTextBox-master\Binary\FastColoredTextBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.CSharp">
-      <HintPath>..\packages\CS-Script.3.9.2.0\lib\net45\Mono.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="RandomNameGeneratorLibrary">
       <HintPath>..\packages\RandomNameGeneratorLibrary.1.0.5.1\lib\net45\RandomNameGeneratorLibrary.dll</HintPath>
@@ -89,6 +83,7 @@
     <Compile Include="AddLocation.Designer.cs">
       <DependentUpon>AddLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="JsonCategory.cs" />
     <Compile Include="CodeEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,7 +93,7 @@
     <Compile Include="CodeWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ControlType.cs" />
+    <Compile Include="JsonControlType.cs" />
     <Compile Include="DataList.cs" />
     <Compile Include="DataStructure.cs">
       <SubType>Form</SubType>
@@ -144,6 +139,7 @@
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchRecords.cs" />
     <Compile Include="Structures.cs" />
   </ItemGroup>
   <ItemGroup>

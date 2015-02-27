@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlFormContent = new System.Windows.Forms.Panel();
-            this.btnUpdateOrCreate = new System.Windows.Forms.Button();
             this.lblFile = new System.Windows.Forms.Label();
+            this.btnUpdateOrCreate = new System.Windows.Forms.Button();
+            this.pnlFormContent = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,14 +45,14 @@
             this.panel1.Size = new System.Drawing.Size(761, 35);
             this.panel1.TabIndex = 0;
             // 
-            // pnlFormContent
+            // lblFile
             // 
-            this.pnlFormContent.AutoScroll = true;
-            this.pnlFormContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFormContent.Location = new System.Drawing.Point(0, 35);
-            this.pnlFormContent.Name = "pnlFormContent";
-            this.pnlFormContent.Size = new System.Drawing.Size(761, 430);
-            this.pnlFormContent.TabIndex = 1;
+            this.lblFile.AutoSize = true;
+            this.lblFile.Location = new System.Drawing.Point(12, 11);
+            this.lblFile.Name = "lblFile";
+            this.lblFile.Size = new System.Drawing.Size(52, 13);
+            this.lblFile.TabIndex = 1;
+            this.lblFile.Text = "Main File:";
             // 
             // btnUpdateOrCreate
             // 
@@ -62,15 +62,16 @@
             this.btnUpdateOrCreate.TabIndex = 0;
             this.btnUpdateOrCreate.Text = "Create";
             this.btnUpdateOrCreate.UseVisualStyleBackColor = true;
+            this.btnUpdateOrCreate.Click += new System.EventHandler(this.btnUpdateOrCreate_Click);
             // 
-            // lblFile
+            // pnlFormContent
             // 
-            this.lblFile.AutoSize = true;
-            this.lblFile.Location = new System.Drawing.Point(12, 11);
-            this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(52, 13);
-            this.lblFile.TabIndex = 1;
-            this.lblFile.Text = "Main File:";
+            this.pnlFormContent.AutoScroll = true;
+            this.pnlFormContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFormContent.Location = new System.Drawing.Point(0, 35);
+            this.pnlFormContent.Name = "pnlFormContent";
+            this.pnlFormContent.Size = new System.Drawing.Size(761, 430);
+            this.pnlFormContent.TabIndex = 1;
             // 
             // LoadForm
             // 
